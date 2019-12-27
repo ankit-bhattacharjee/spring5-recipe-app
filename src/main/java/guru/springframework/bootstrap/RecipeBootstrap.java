@@ -20,7 +20,6 @@ import java.util.Optional;
  */
 @Slf4j
 @Component
-@Slf4j
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     private final CategoryRepository categoryRepository;
