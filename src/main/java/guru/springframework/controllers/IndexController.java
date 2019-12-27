@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Created by jt on 6/1/17.
  */
-@Controller
 @Slf4j
+@Controller
 public class IndexController {
 
     private final RecipeService recipeService;
@@ -21,8 +21,10 @@ public class IndexController {
 
     @RequestMapping({"", "/", "/index"})
     public String getIndexPage(Model model) {
-        log.debug("Request received for /getIndexPage");
+        log.debug("Getting Index page");
+
         model.addAttribute("recipes", recipeService.getRecipes());
+
         return "index";
     }
 }
